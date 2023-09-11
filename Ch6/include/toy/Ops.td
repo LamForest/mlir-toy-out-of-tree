@@ -213,7 +213,7 @@ def ReshapeOp : Toy_Op<"reshape", [NoSideEffect]> {
   }];
 
   // Enable registering canonicalization patterns with this operation.
-  let hasCanonicalizer = 1;
+  // let hasCanonicalizer = 1;
 
   // We expect that the reshape operation returns a statically shaped tensor.
   let results = (outs StaticShapeTensorOf<[F64]>);
@@ -269,7 +269,7 @@ def TransposeOp : Toy_Op<"transpose",
   }];
 
   // Enable registering canonicalization patterns with this operation.
-  let hasCanonicalizer = 1;
+  // let hasCanonicalizer = 1;
 
   // Allow building a TransposeOp with from the input operand.
   let builders = [
